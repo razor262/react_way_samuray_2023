@@ -1,15 +1,15 @@
 import React from "react";
 import myImage from "./image/shiroishi.jpeg";
 import consumer from "./image/consumer.jpg";
-import './profile_style/Profile.css';  
+import p from './profile_style/Profile.module.css';  
 
 const Profile = () => {
   return (
-    <div className="content">
+    <div className={p.content}>
       <div>
         <img src={myImage} alt="cyberpunk girl" />
       </div>
-      <div className="content__ava_description">
+      <div className={p.content__ava_description}>
         <img src={consumer} alt="cyberpunk consumer" />
         <div>
           <h3>Александра, 28 Night City</h3>
@@ -18,9 +18,15 @@ const Profile = () => {
       </div>
       <div>My posts</div>
       <div>New post</div>
-      <div>post 1</div>
-      <div>post 2</div>
+	<div className={p.posts}> 
+	  <div className={p.item}>
+		post 1
+	  </div>
+      <div className={p.item}>
+		post 2
+	  </div>
     </div>
+  </div>
   );
 };
 
