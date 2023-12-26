@@ -1,0 +1,15 @@
+.content {
+	grid-area: c;   
+	background-color: #6a7e6a;  
+}  
+
+.content img {
+	height: 400px;  
+}
+.content__ava_description {
+	display: flex;
+}
+
+.content__ava_description img {
+	border-radius: 40%;
+}
