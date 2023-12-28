@@ -1,9 +1,8 @@
 import React, { Profiler } from "react";
-// import {Component} from 'react';
 import a from "./App.module.css";
 import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
-import Profile from "./components/profile/Profile";
+import Profile from "./components/Profile/Profile";
 
 const App = () => {
   return (
