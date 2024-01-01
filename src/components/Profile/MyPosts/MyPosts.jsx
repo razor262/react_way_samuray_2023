@@ -1,10 +1,15 @@
 import React from "react";
 import s from './MyPosts_style/MyPosts.module.css';  
-// import consumer from "./image/consumer3.png";
 import Post from './Post/Post.jsx'; 
 
 const MyPosts = () => {
-  return (
+  
+	let postData = [
+		{id: 1, message: "Hi, how are you?", likesCount: 15 }, 
+		{id: 2, message: "It's my first post", likesCount: 20 } 
+	];  
+
+	return (
     <div className={s.postsBlock} >
 		<h3>My posts</h3> 
 		<div>
@@ -16,8 +21,8 @@ const MyPosts = () => {
 		</div>
 	    </div>
 		<div className={s.posts}> 
-			<Post message='Hi, how are you?' likesCount='15' />  	
-			<Post message="It's my first post" likeCount='20' />  	
+			<Post message={postData[0].message} likesCount={postData[0].likesCount} />  	
+			<Post message={postData[1].message} likesCount={postData[1].likesCount} />  	
 		</div>
 	  </div>
   );
