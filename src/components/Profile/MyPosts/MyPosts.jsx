@@ -5,16 +5,19 @@ import Post from './Post/Post.jsx';
 
 const MyPosts = () => {
   return (
-    <div>
-		My posts
+    <div className={s.postsBlock} >
+		<h3>My posts</h3> 
+		<div>
 		<div>
 			<textarea></textarea>   
+		</div>
+		<div>
 			<button>Add post</button>  	
-			<button>Remove</button>  	
+		</div>
 	    </div>
 		<div className={s.posts}> 
-			<Post message='Hi, how are you?' count='15' />  	
-			<Post message="It's my first post" count='20' />  	
+			<Post message='Hi, how are you?' likesCount='15' />  	
+			<Post message="It's my first post" likeCount='20' />  	
 		</div>
 	  </div>
   );

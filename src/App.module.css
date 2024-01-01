@@ -1,5 +1,5 @@
+
 .appWrapper {
-	color: #fff;	
 	margin: 0 auto;	
 	display: grid;  	
 	max-width: 1200px;
@@ -11,33 +11,11 @@
 	grid-template-columns: 2fr 10fr;  
 	/* grid-gap: 10px; */   
 } 
-/*
-.header {
-	grid-area: h;   
-	background-color: green;  
-}
-.header img {
-	width: 50px;  
-}
-.nav {
-	grid-area: n;   
-	background-color: burlywood;  
-}  
+
 .content {
 	grid-area: c;   
-	background-color: cornflowerblue;  
+	background-color: #6a7e6a;  
 }  
-
-.content img {
-	height: 400px;  
-}
-.content__ava_description {
-	display: flex;
-}
-
-.content__ava_description img {
-	border-radius: 40%;
-}
 
 /* 
 При обращении к элементу по классу через точку и тире в CSS модулях выдается ошибка, потому что имена классов в CSS модулях могут содержать только буквы, цифры и тире (дефис), но не могут содержать точку.

@@ -7,4 +7,14 @@
 	border-radius: 50%;
 } 
 
+.postsBlock {
+	color: #fff;  	
+	padding: 10px; 
+} 
 
+.posts {
+	padding-top: 10px;  
+}
+.postsBlock button {
+	margin-top: 10px;  
+}
