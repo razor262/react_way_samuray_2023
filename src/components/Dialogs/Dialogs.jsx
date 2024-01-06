@@ -2,10 +2,10 @@ import React from 'react';
 import s from './Dialogs_style/Dialogs.module.css'; 
 import DialogItem from './DialogItem/DialogItem';  
 import Message from './Message/Message';  
-
+import TextArea from './textarea/TextArea';   
 
 const Dialogs = (props) => {	
-
+	 
 	let dialogsElements = props.state.dialogs.map(d => {
 		return <DialogItem name={d.name} id={d.id} /> 	
 	});  
@@ -16,12 +16,16 @@ const Dialogs = (props) => {
 	console.log(messagesElements); 	
 
 	return (
-		  <div className={s.content}>
+		<div className={s.content}>
 			<div className={s.dialogsItems}>
 			{ dialogsElements }	
 			</div>   
 			<div className={s.messages}>	
 			{ messagesElements }
+			</div>  
+		
+			<div>
+				<TextArea />    
 			</div>  
 		</div>  
 	);   
