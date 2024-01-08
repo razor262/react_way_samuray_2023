@@ -11,6 +11,7 @@ const Music = () => <h2>Музыка</h2>;
 const Setting = () => <h2>Настройки</h2>;  
 
 const App = (props) => {
+	// debugger; 
 	return (
     <BrowserRouter> 
 	  <div className={s.appWrapper}>
@@ -18,7 +19,8 @@ const App = (props) => {
 		<Navbar state={ props.state.sidebar } />     
 		<div className={s.content}>
 		  <Routes> 
-			<Route path="/profile" element={<Profile state={ props.state.profilePage	} />} />	 
+			<Route path="/profile" 
+		element={<Profile state={ props.state.profilePage } addPost={ props.addPost } />} />	 
 			<Route path="/dialogs" element={<Dialogs state={ props.state.messagesPage } />} />	 
 	
 			<Route path="/news" element={<News />} />	 

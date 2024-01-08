@@ -3,7 +3,7 @@ import s from './MyPosts_style/MyPosts.module.css';
 import Post from './Post/Post.jsx'; 
 
 const MyPosts = (props) => {
-
+	// debugger;     
 	let postsElements = props.state.posts.map( p => {
 		return <Post message={p.message} likesCount={p.likesCount} />  	
 	}); 
@@ -13,7 +13,7 @@ const MyPosts = (props) => {
 	let addPost = () => {
 		 
 		let text = newPostElement.current.value; 
-		alert( text );     	
+		props.addPost( text );     	
 	}  
 
 	return (

@@ -36,6 +36,22 @@ const state = {
 			{id: 3, user: "Sveta"} 
 		] 
 	}
+
 } 
 
-export default state;
+export let addPost = (postMessage) => { // экспортирует именно этот объект по названию   
+	// debugger; 
+	let newPost = {
+		id: 5, 
+		message: postMessage,  
+		likesCount: 0  
+	} 
+	state.profilePage.posts.push( newPost );  // добавляет объект newPost в конец массив   
+	// debugger; 
+	  
+};  
+
+export default state; 
+
+
+
