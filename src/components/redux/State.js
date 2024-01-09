@@ -1,4 +1,5 @@
 import React from 'react'; 
+import Render from './Render.js'; 
 
 const state = { 
 	profilePage : {	
@@ -48,7 +49,8 @@ export let addPost = (postMessage) => { // экспортирует именно
 	} 
 	state.profilePage.posts.push( newPost );  // добавляет объект newPost в конец массив   
 	// debugger; 
-	  
+	Render(state);  // вызывает функцию рендер в файле рендер
+	//которая заново все перерисовывает все компоненту  
 };  
 
 export default state; 

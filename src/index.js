@@ -7,8 +7,10 @@ import state from './components/redux/State';
 import { addPost } from './components/redux/State'; // импортировать
 // должны строго под тем именем   
 // которое экспортируется    
-
+// import render from './components/redux/render.js'; 
 // addPost('SamuraiJS.COM');  
+
+export let rerenderEntireTree = (props) => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +19,9 @@ root.render(
   </React.StrictMode>
 );
 
+} 
+
+	rerenderEntireTree(); 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
