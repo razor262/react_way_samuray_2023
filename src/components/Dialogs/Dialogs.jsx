@@ -2,15 +2,32 @@ import React from 'react';
 import s from './Dialogs_style/Dialogs.module.css'; 
 import DialogItem from './DialogItem/DialogItem';  
 import Message from './Message/Message';  
-import TextArea from './textarea/TextArea';   
 
 const Dialogs = (props) => {	
-	 
-	let dialogsElements = props.state.dialogs.map(d => {
+
+	// --------- text_area ------------ //   
+	let newPostElement = React.createRef(); 
+
+	let addPost = () => {
+		 
+		let text = newPostElement.current.value; 
+		props.addPost( text );     	
+			
+	}  
+	
+	let onPostCnange = () => {
+	    let text = newPostElement.current.value; 
+	    props.updateNewPostText(text); 
+    }  
+	
+	// --------- text_area ------------ //   
+	
+	// debugger;  
+	let dialogsElements = props.state.messagesPage.dialogs.map(d => {
 		return <DialogItem name={d.name} id={d.id} /> 	
 	});  
 	
-	let messagesElements = props.state.messages.map(m => {
+	let messagesElements = props.state.messagesPage.messages.map(m => {
 		return <Message message={m.message} /> 		
 	});  
 	console.log(messagesElements); 	
@@ -25,7 +42,20 @@ const Dialogs = (props) => {
 			</div>  
 		
 			<div>
-				<TextArea />    
+				
+		<div>
+			<textarea 
+            onChange={onPostCnange}
+            ref={newPostElement}
+            newPostText={ props.state.newPostText }
+             />    
+		</div>
+		<div>
+			<button onClick={ addPost }>Add post</button>  	
+		</div>
+		        <div className={s.posts}>
+					 { dialogsElements }   
+		        </div> 
 			</div>  
 		</div>  
 	);   

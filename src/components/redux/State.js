@@ -8,7 +8,8 @@ const state = {
 			{id: 2, message: "It's my first post", likesCount: 20 },
 			{ id: 3, message: "Blabla", likesCount: "10" },
 			{ id: 4, message: "Dada", likesCount: "345" },
-		]    
+		],    
+		newPostText: 'it-kamasutra.com' 	
 	}, 
 	
 	messagesPage : {
@@ -44,13 +45,19 @@ export let addPost = (postMessage) => { // экспортирует именно
 	// debugger; 
 	let newPost = {
 		id: 5, 
-		message: postMessage,  
+		message: state.profilePage.newPostText,  
 		likesCount: 0  
 	} 
 	state.profilePage.posts.push( newPost );  // добавляет объект newPost в конец массив   
 	// debugger; 
 	Render(state);  // вызывает функцию рендер в файле рендер
 	//которая заново все перерисовывает все компоненту  
+};  
+
+export let updateNewPostText = (newText) => {    
+	// debugger; 
+	state.profilePage.newPostText = newText;      
+	console.log('work'); 
 };  
 
 export default state; 

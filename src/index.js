@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './components/redux/State'; 
 import { addPost } from './components/redux/State'; // импортировать
+import { updateNewPostText } from './components/redux/State'; 
 // должны строго под тем именем   
 // которое экспортируется    
 // import render from './components/redux/render.js'; 
@@ -15,7 +16,9 @@ export let rerenderEntireTree = (props) => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App state={ state } addPost={ addPost } />
+    <App state={ state } addPost={ addPost }
+	updateNewPostText = { updateNewPostText }
+	/>
   </React.StrictMode>
 );
 
